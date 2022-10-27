@@ -5,7 +5,7 @@ import img1 from "../../assets/images/Rectangle 6 (1).svg";
 
 const HeroSection = () => {
   return (
-    <div className="px-20 mt-20">
+    <div className="px-10 md:px-20 mt-20">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
         <div class="item1 col-span-8">
           <div>
@@ -59,7 +59,7 @@ const HeroSection = () => {
                       />
                     </svg>
                   </p>
-                  <p>Scroll down </p>
+                  <p className="hidden md:block">Scroll down </p>
                 </div>
               </div>
               <div></div>
@@ -67,7 +67,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div class="item2 col-span-4 mt-28">
-          <img src={img2} alt="img2" />
+          <img className="img2" src={img2} alt="img2" />
         </div>
       </div>
     </div>

@@ -18,7 +18,21 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-.scroll-down{
+.scroll-down {
   transform: rotate(-90deg);
   text-align: right;
+}
+/* responsive */
+@media (max-width: 762px) {
+  h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    color: #0a142f;
+    margin: 0;
+    line-height: 1em;
+  }
+  img2 {
+    width: 100%;
+  }
 }

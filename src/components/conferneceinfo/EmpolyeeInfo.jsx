@@ -10,7 +10,7 @@ const EmpolyeeInfo = () => {
   const [button4, setButton4] = useState(false);
   const [button5, setButton5] = useState(false);
   const [employees, setEmployee] = useState([]);
-  const isActive1 =  () => {
+  const isActive1 = () => {
     setButton1(true);
     setButton2(false);
     setButton3(false);
@@ -62,7 +62,7 @@ const EmpolyeeInfo = () => {
   return (
     <div className="mt-10">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-        <div class="item1 col-span-4">
+        <div class="item1 col-span-12 md:col-span-4">
           <div className="mx-auto">
             <div
               onClick={isActive1}
@@ -79,6 +79,28 @@ const EmpolyeeInfo = () => {
               </div>
               <p className="ml-16">jfghfdgfg</p>
             </div>
+            <div className={button1 ? "my-4-10 w-wull show-table block md:hidden":"my-4-10 w-wull show-table hidden md:hidden"}>
+            {employees.map((e, i) => {
+              return (
+                <div key={i}>
+                  <div className="flex mb-4">
+                    <div className="mr-6">
+                      <img className="img-body" src={e.img} alt="" />
+                    </div>
+                    <div>
+                      <div className="flex justify-between">
+                        <p className="heading">{e.author}</p>
+                        <p className="heading">{e.company}</p>
+                      </div>
+                      <div>
+                        <p className="pera">{e.pera}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
             <div
               onClick={isActive2}
               className={
@@ -94,6 +116,28 @@ const EmpolyeeInfo = () => {
               </div>
               <p className="ml-16">jfghfdgfg</p>
             </div>
+            <div className={button2 ? "my-4-10 w-wull show-table block md:hidden":"my-4-10 w-wull show-table hidden md:hidden"}>
+            {employees.map((e, i) => {
+              return (
+                <div key={i}>
+                  <div className="flex mb-4">
+                    <div className="mr-6">
+                      <img className="img-body" src={e.img} alt="" />
+                    </div>
+                    <div>
+                      <div className="flex justify-between">
+                        <p className="heading">{e.author}</p>
+                        <p className="heading">{e.company}</p>
+                      </div>
+                      <div>
+                        <p className="pera">{e.pera}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
             <div
               onClick={isActive3}
               className={
@@ -109,6 +153,28 @@ const EmpolyeeInfo = () => {
               </div>
               <p className="ml-16">jfghfdgfg</p>
             </div>
+            <div className={button3 ? "my-4-10 w-wull show-table block md:hidden":"my-4-10 w-wull show-table hidden md:hidden"}>
+            {employees.map((e, i) => {
+              return (
+                <div key={i}>
+                  <div className="flex mb-4">
+                    <div className="mr-6">
+                      <img className="img-body" src={e.img} alt="" />
+                    </div>
+                    <div>
+                      <div className="flex justify-between">
+                        <p className="heading">{e.author}</p>
+                        <p className="heading">{e.company}</p>
+                      </div>
+                      <div>
+                        <p className="pera">{e.pera}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
             <div
               onClick={isActive4}
               className={
@@ -124,6 +190,28 @@ const EmpolyeeInfo = () => {
               </div>
               <p className="ml-16">jfghfdgfg</p>
             </div>
+            <div className={button4 ? "my-4-10 w-wull show-table block md:hidden":"my-4-10 w-wull show-table hidden md:hidden"}>
+            {employees.map((e, i) => {
+              return (
+                <div key={i}>
+                  <div className="flex mb-4">
+                    <div className="mr-6">
+                      <img className="img-body" src={e.img} alt="" />
+                    </div>
+                    <div>
+                      <div className="flex justify-between">
+                        <p className="heading">{e.author}</p>
+                        <p className="heading">{e.company}</p>
+                      </div>
+                      <div>
+                        <p className="pera">{e.pera}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
             <div
               onClick={isActive5}
               className={
@@ -139,29 +227,51 @@ const EmpolyeeInfo = () => {
               </div>
               <p className="ml-16">jfghfdgfg</p>
             </div>
+            <div className={button5 ? "my-4-10 w-wull show-table block md:hidden":"my-4-10 w-wull show-table hidden md:hidden"}>
+            {employees.map((e, i) => {
+              return (
+                <div key={i}>
+                  <div className="flex mb-4">
+                    <div className="mr-6">
+                      <img className="img-body" src={e.img} alt="" />
+                    </div>
+                    <div>
+                      <div className="flex justify-between">
+                        <p className="heading">{e.author}</p>
+                        <p className="heading">{e.company}</p>
+                      </div>
+                      <div>
+                        <p className="pera">{e.pera}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
           </div>
         </div>
         <div class="item1 col-span-8">
-          <div className="ml-10 show-table">
+          <div className="ml-10 show-table hidden md:block">
             {employees.map((e, i) => {
-                return(
-                    <div key={i}>
-                        <div className="flex mb-4">
-                            <div className="mr-6">
-                                <img className="img-body" src={e.img} alt="" />
-                            </div>
-                            <div>
-                                <div className="flex justify-between">
-                                    <p className="heading">{e.author}</p>
-                                    <p className="heading">{e.company}</p>
-                                </div>
-                                <div>
-                                    <p className="pera">{e.pera}</p>
-                                </div>
-                            </div>
-                        </div>
+              return (
+                <div key={i}>
+                  <div className="flex mb-4">
+                    <div className="mr-6">
+                      <img className="img-body" src={e.img} alt="" />
                     </div>
-                )
+                    <div>
+                      <div className="flex justify-between">
+                        <p className="heading">{e.author}</p>
+                        <p className="heading">{e.company}</p>
+                      </div>
+                      <div>
+                        <p className="pera">{e.pera}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
             })}
           </div>
         </div>
