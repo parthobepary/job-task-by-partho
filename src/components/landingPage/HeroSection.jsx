@@ -2,11 +2,12 @@ import React from "react";
 import "../../assets/css/herosection.css";
 import img2 from "../../assets/images/Rectangle 1.svg";
 import img1 from "../../assets/images/Rectangle 6 (1).svg";
+import img3 from "../../assets/images/Star 2.svg";
 
 const HeroSection = () => {
   return (
     <div className="px-10 md:px-20 mt-20">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 parent-div">
         <div class="item1 col-span-8">
           <div>
             <div className="text-right">
@@ -14,7 +15,7 @@ const HeroSection = () => {
               <h2>Conference</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 mt-5">
-              <div>
+              <div className="first-img">
                 <img src={img1} alt="img1" />
               </div>
               <div>
@@ -68,6 +69,7 @@ const HeroSection = () => {
         </div>
         <div class="item2 col-span-4 mt-28">
           <img className="img2" src={img2} alt="img2" />
+          <img className="img3" src={img3} alt="" />
         </div>
       </div>
     </div>

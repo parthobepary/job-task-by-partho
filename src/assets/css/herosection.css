@@ -22,6 +22,24 @@ h2 {
   transform: rotate(-90deg);
   text-align: right;
 }
+.first-img{
+  background-image: url("../images/Ornament\ 13.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.item2{
+  position: relative;
+}
+.img3{
+  position: absolute;
+  bottom: 120px;
+  left: -60px;
+}
+.parent-div{
+  background-image: url("../images//Vector\ 1.svg");
+  background-repeat: no-repeat;
+  background-position: 160% 10%;
+}
 /* responsive */
 @media (max-width: 762px) {
   h2 {
