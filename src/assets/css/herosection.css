@@ -87,6 +87,34 @@ h2 {
   .img3 {
     position: absolute;
     bottom: -70px;
+    left: 180px;
+  }
+  .set-bg-color2 {
+    z-index: -12;
+  }
+  .set-bg-color1 {
+    z-index: -12;
+  }
+}
+@media (max-width: 900px) {
+  h2 {
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    color: #0a142f;
+    margin: 0;
+    line-height: 1em;
+  }
+  .item2 {
+    width: 100%;
+  }
+  .img2 {
+    width: 100%;
+  }
+  .img3 {
+    position: absolute;
+    bottom: -70px;
     left: 220px;
   }
   .set-bg-color2 {

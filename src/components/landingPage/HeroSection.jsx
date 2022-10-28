@@ -70,7 +70,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div class="item2 col-span-11 md:col-span-4 mt-28 order-2 md:order-3">
+        <div class="item2 col-span-8 md:col-span-4 mt-28">
           <img className="img2 w-full" src={img2} alt="img2" />
           <img className="img3" src={img3} alt="" />
         </div>
