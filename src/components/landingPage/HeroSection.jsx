@@ -7,6 +7,10 @@ import img3 from "../../assets/images/Star 2.svg";
 const HeroSection = () => {
   return (
     <div className="px-10 md:px-20 mt-20">
+      <div className="flex set-bg-color">
+        <div className="set-bg-color1 hidden md:block"></div>
+        <div className="set-bg-color2"></div>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 parent-div">
         <div class="item1 col-span-8">
           <div>

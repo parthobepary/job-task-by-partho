@@ -3,7 +3,7 @@ import "../../assets/css/event-schedule.css";
 
 const EventTable = () => {
     return (
-        <div className='mt-10'>
+        <div className='mt-10 scroll'>
             <div className='box-container'>
                 <div className="grid grid-cols-7">
                     <div className='border1'></div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import vector from "../../assets/images/Vector.svg";
 import "../../assets/css/employee.css";
 import { useState } from "react";
@@ -58,6 +58,14 @@ const EmpolyeeInfo = () => {
         setEmployee(data);
       });
   };
+  useEffect(() => {
+    fetch("json/empolyee.json")
+    .then((res) => res.json())
+    .then((data) => {
+      setEmployee(data);
+    });
+  }, [])
+  
 
   return (
     <div className="mt-10">

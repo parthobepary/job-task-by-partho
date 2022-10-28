@@ -17,28 +17,53 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .scroll-down {
   transform: rotate(-90deg);
   text-align: right;
 }
-.first-img{
+.first-img {
   background-image: url("../images/Ornament\ 13.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
 }
-.item2{
+.item2 {
   position: relative;
 }
-.img3{
+.img3 {
   position: absolute;
   bottom: 120px;
   left: -60px;
 }
-.parent-div{
+.parent-div {
   background-image: url("../images//Vector\ 1.svg");
   background-repeat: no-repeat;
-  background-position: 160% 10%;
+  background-position: 190% 40%;
+  background-origin: content-box;
+  object-fit: fill;
+}
+.set-bg-color2 {
+  width: 412px;
+  height: 202px;
+  background: #be229c;
+  opacity: 0.9;
+  filter: blur(250px);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.set-bg-color1{
+  width: 412px;
+  height: 202px;
+  background: #7C3EFF;
+  opacity: 0.9;
+  filter: blur(250px);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 /* responsive */
 @media (max-width: 762px) {

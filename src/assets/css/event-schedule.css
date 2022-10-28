@@ -77,3 +77,6 @@ p {
   padding: 15px 0 2px 18px;
   line-height: 1rem;
 }
+.scroll {
+  overflow: scroll;
+}
