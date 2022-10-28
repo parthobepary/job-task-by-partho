@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import vector from "../../assets/images/Vector.svg";
+import React, { useEffect, useState } from "react";
 import "../../assets/css/employee.css";
-import { useState } from "react";
+import vector from "../../assets/images/Vector.svg";
 
 const EmpolyeeInfo = () => {
   const [button1, setButton1] = useState(false);
@@ -70,7 +69,7 @@ const EmpolyeeInfo = () => {
   return (
     <div className="mt-10">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-        <div class="item1 col-span-12 md:col-span-4">
+        <div class="item1 col-span-10 md:col-span-4">
           <div className="mx-auto">
             <div
               onClick={isActive1}
@@ -87,7 +86,7 @@ const EmpolyeeInfo = () => {
               </div>
               <p className="ml-16">jfghfdgfg</p>
             </div>
-            <div className={button1 ? "my-4-10 w-wull show-table block md:hidden":"my-4-10 w-wull show-table hidden md:hidden"}>
+            <div className={button1 ? "my-4-10  show-table block md:hidden":"my-4-10  show-table hidden md:hidden"}>
             {employees.map((e, i) => {
               return (
                 <div key={i}>
@@ -124,7 +123,7 @@ const EmpolyeeInfo = () => {
               </div>
               <p className="ml-16">jfghfdgfg</p>
             </div>
-            <div className={button2 ? "my-4-10 w-wull show-table block md:hidden":"my-4-10 w-wull show-table hidden md:hidden"}>
+            <div className={button2 ? "my-4-10  show-table block md:hidden":"my-4-10  show-table hidden md:hidden"}>
             {employees.map((e, i) => {
               return (
                 <div key={i}>
@@ -161,7 +160,7 @@ const EmpolyeeInfo = () => {
               </div>
               <p className="ml-16">jfghfdgfg</p>
             </div>
-            <div className={button3 ? "my-4-10 w-wull show-table block md:hidden":"my-4-10 w-wull show-table hidden md:hidden"}>
+            <div className={button3 ? "my-4-10  show-table block md:hidden":"my-4-10  show-table hidden md:hidden"}>
             {employees.map((e, i) => {
               return (
                 <div key={i}>
@@ -198,7 +197,7 @@ const EmpolyeeInfo = () => {
               </div>
               <p className="ml-16">jfghfdgfg</p>
             </div>
-            <div className={button4 ? "my-4-10 w-wull show-table block md:hidden":"my-4-10 w-wull show-table hidden md:hidden"}>
+            <div className={button4 ? "my-4-10  show-table block md:hidden":"my-4-10  show-table hidden md:hidden"}>
             {employees.map((e, i) => {
               return (
                 <div key={i}>
@@ -235,7 +234,7 @@ const EmpolyeeInfo = () => {
               </div>
               <p className="ml-16">jfghfdgfg</p>
             </div>
-            <div className={button5 ? "my-4-10 w-wull show-table block md:hidden":"my-4-10 w-wull show-table hidden md:hidden"}>
+            <div className={button5 ? "my-4-10  show-table block md:hidden":"my-4-10  show-table hidden md:hidden"}>
             {employees.map((e, i) => {
               return (
                 <div key={i}>
@@ -259,7 +258,7 @@ const EmpolyeeInfo = () => {
           </div>
           </div>
         </div>
-        <div class="item1 col-span-8">
+        <div class="item1 col-span-10 md:col-span-8">
           <div className="ml-10 show-table hidden md:block">
             {employees.map((e, i) => {
               return (

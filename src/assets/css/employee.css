@@ -29,3 +29,9 @@ font-weight: 700;
 font-size: 20px;
 color: #0A142F;
 }
+@media (max-width: 762px) {
+  .heading{
+    font-weight: 600;
+    line-height: 1rem;
+    }
+}
