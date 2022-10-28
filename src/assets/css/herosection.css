@@ -106,6 +106,9 @@ h2 {
     margin: 0;
     line-height: 1em;
   }
+  .img3{
+    width: 80px;
+  }
   .item2 {
     width: 100%;
   }
@@ -114,8 +117,8 @@ h2 {
   }
   .img3 {
     position: absolute;
-    bottom: -70px;
-    left: 220px;
+    bottom: -40px;
+    left: 230px;
   }
   .set-bg-color2 {
     z-index: -12;
