@@ -78,5 +78,6 @@ p {
   line-height: 1rem;
 }
 .scroll {
-  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }

@@ -18,14 +18,14 @@
   height: 140px;
   border-radius: 8px;
 }
-.pera {
-  line-height: 1.5rem;
-  font-size: 20px;
+.pera{
+    line-height: 1.5rem;
+    font-size: 20px;
 }
-.heading {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  color: #0a142f;
+.heading{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+color: #0A142F;
 }

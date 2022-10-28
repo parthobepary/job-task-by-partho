@@ -19,10 +19,10 @@ const HeroSection = () => {
               <h2>Conference</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 mt-5">
-              <div className="first-img">
+              <div className="first-img order-3 md:order-1">
                 <img src={img1} alt="img1" />
               </div>
-              <div>
+              <div className="order-1 md:order-2">
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
                   accusamus nemo provident voluptatum quaerat ipsa. Unde,
@@ -67,12 +67,11 @@ const HeroSection = () => {
                   <p className="hidden md:block">Scroll down </p>
                 </div>
               </div>
-              <div></div>
             </div>
           </div>
         </div>
-        <div class="item2 col-span-4 mt-28">
-          <img className="img2" src={img2} alt="img2" />
+        <div class="item2 col-span-11 md:col-span-4 mt-28 order-2 md:order-3">
+          <img className="img2 w-full" src={img2} alt="img2" />
           <img className="img3" src={img3} alt="" />
         </div>
       </div>

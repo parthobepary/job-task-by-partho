@@ -45,7 +45,7 @@ h2 {
 }
 .set-bg-color2 {
   width: 412px;
-  height: 202px;
+  height: 192px;
   background: #be229c;
   opacity: 0.9;
   filter: blur(250px);
@@ -56,7 +56,7 @@ h2 {
 }
 .set-bg-color1{
   width: 412px;
-  height: 202px;
+  height: 192px;
   background: #7C3EFF;
   opacity: 0.9;
   filter: blur(250px);
@@ -66,8 +66,9 @@ h2 {
   left: 0px;
 }
 /* responsive */
-@media (max-width: 762px) {
+@media (max-width: 762px ) {
   h2 {
+    text-align: left;
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
@@ -75,7 +76,15 @@ h2 {
     margin: 0;
     line-height: 1em;
   }
-  img2 {
+  .item2{
     width: 100%;
+  }
+  .img2 {
+    width: 100%;
+  }
+  .img3 {
+    position: absolute;
+    bottom: -70px;
+    left: 230px;
   }
 }
