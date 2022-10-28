@@ -258,7 +258,7 @@ const EmpolyeeInfo = () => {
           </div>
           </div>
         </div>
-        <div class="item1 col-span-10 md:col-span-8">
+        <div class="item1 col-span-9 md:col-span-8">
           <div className="ml-10 show-table hidden md:block">
             {employees.map((e, i) => {
               return (
