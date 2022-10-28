@@ -6,6 +6,7 @@ import Conference from "../pages/Conference";
 import Landing from "../pages/Landing";
 import OurWork from "../pages/OurWork";
 import SayHi from "../pages/SayHi";
+import ShceduleDetails from "../pages/ShceduleDetails";
 import WhatWeDo from "../pages/WhatWeDo";
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />}></Route>
+        <Route path="/schedule/:item" element={<ShceduleDetails />}></Route>
         <Route path="/about" element={<Conference />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/ourwork" element={<OurWork />}></Route>

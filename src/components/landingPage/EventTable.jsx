@@ -1,83 +1,117 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import Draggable from "react-draggable";
+import { useNavigate } from "react-router-dom";
 import "../../assets/css/event-schedule.css";
 
-const EventTable = () => {
-    return (
-        <div className='mt-10 scroll'>
-            <div className='box-container'>
-                <div className="grid grid-cols-7">
-                    <div className='border1'></div>
-                    <div className='border2'> Tue</div>
-                    <div className='border2'> Wed</div>
-                    <div className='border2'> Thu</div>
-                    <div className='border2'> Fri</div>
-                    <div className='border2'> Sat</div>
-                    <div className='border2'> Sat</div>
-                    <div className='border time'> 09.00</div>
-                    <div className='border'>
-                        <div className='content-box'>
-                            <h5 className='header-text'>02-08-2022</h5>
-                            <div className='intro-box'>
-                                <h5 className='header-text'>Intro the conference</h5>
-                                <h5>09.00-11.50</h5>
-                            </div>
-                        </div>
+const EventTable = ({ navigation }) => {
+  const [td, setTd] = useState([]);
+  const [schedule, setSchedule] = useState([]);
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    fetch("json/td1.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setTd(data);
+      });
+  }, []);
+  useEffect(() => {
+    fetch("json/schedule.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setSchedule(data);
+      });
+  }, []);
+
+  const detailsShcedule = (item) => {
+    console.log(item);
+    navigate(`/schedule/${item}`);
+  }
+
+  return (
+    <div className="mt-10 scroll">
+      {td.length}
+      <div className="box-container">
+        <table>
+          <tr>
+            <th></th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+          </tr>
+          <tr>
+            <td>09.00</td>
+            {schedule.map((t, i) => {
+              return (
+                <td key={i}>
+                  <Draggable>
+                    <div className="box-1">
+                      <p>{t.time}</p>
+                      <div>
+                        <p>{t.name}</p>
+                        <p>{t.distance}</p>
+                      </div>
+                      <button className="btn" onClick={()=>detailsShcedule(JSON.stringify(t))}>Detail</button>
                     </div>
-                    <div className='border'> </div>
-                    <div className='border'> </div>
-                    <div className='border'> </div>
-                    <div className='border'> </div>
-                    <div className='border'>
-                    <div className='content-box'>
-                            <h5 className='header-text'>07-08-2022</h5>
-                            <div className='intro-box'>
-                                <h5 className='header-text'>Lunch Break</h5>
-                                <h5>09.00-10.00</h5>
-                            </div>
-                        </div>
+                  </Draggable>
+                </td>
+              );
+            })}
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>10.00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            {schedule.map((t, i) => {
+              return (
+                <td key={i}>
+                  <Draggable>
+                    <div className="box-2">
+                      <p>{t.time}</p>
+                      <div>
+                        <p>{t.name}</p>
+                        <p>{t.distance}</p>
+                      </div>
+                      <button className="btn" onClick={()=>detailsShcedule(JSON.stringify(t))}>Detail</button>
                     </div>
-                    <div className='border time'> 10.00</div>
-                    <div className='border'> </div>
-                    <div className='border'> </div>
-                    <div className='border'> </div>
-                    <div className='border'>
-                    <div className='content-box'>
-                            <h5 className='header-text'>12-08-2022</h5>
-                            <div className='intro-box'>
-                                <h5 className='header-text'>React Press conference</h5>
-                                <h5>10.00-11.00</h5>
-                            </div>
-                        </div>
+                  </Draggable>
+                </td>
+              );
+            })}
+          </tr>
+          <tr>
+            <td>17.00</td>
+            <td></td>
+            {schedule.map((t, i) => {
+              return (
+                <td key={i}>
+                  <Draggable>
+                    <div className="box-3">
+                      <p>{t.time}</p>
+                      <div>
+                        <p>{t.name}</p>
+                        <p>{t.distance}</p>
+                      </div>
+                      <button className="btn" onClick={()=>detailsShcedule(JSON.stringify(t))}>Detail</button>
                     </div>
-                    <div className='border'> </div>
-                    <div className='border'> </div>
-                    <div className='border time'> 17.00</div>
-                    <div className='border'> </div>
-                    <div className='border'>
-                    <div className='content-box'>
-                            <h5 className='header-text'>17-08-2022</h5>
-                            <div className='intro-box2'>
-                                <h5 className='header-text'>Gust Denner Break</h5>
-                                <h5>17.00-18.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='border'> </div>
-                    <div className='border'> </div>
-                    <div className='border'>
-                    <div className='content-box'>
-                            <h5 className='header-text'>20-08-2022</h5>
-                            <div className='intro-box2'>
-                                <h5 className='header-text'>After Work Party</h5>
-                                <h5>17.00-18.30</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='border'> </div>
-                </div>
-            </div>
-        </div>
-    );
+                  </Draggable>
+                </td>
+              );
+            })}
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  );
 };
 
 export default EventTable;
