@@ -30,7 +30,6 @@ const EventTable = ({ navigation }) => {
 
   return (
     <div className="mt-10 scroll">
-      {td.length}
       <div className="box-container">
         <table>
           <tr>
